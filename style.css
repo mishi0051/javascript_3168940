@@ -90,3 +90,21 @@
   font-weight: bold;
 }
 
+.saltar {
+    animation: saltar 0.5s ease forwards;
+}
+
+@keyframes saltar {
+0%{transform: translateY(0); opacity: 1;}
+50%{transform: translateY(-30px); opacity: 0.5;}
+100%{transform: translateY(0); opacity: 1;}
+}
+
+.moverHonguito {
+    animation: moverHonguito 1s linear infinite alternate;
+}
+
+@keyframes moverHonguito {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}

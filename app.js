@@ -1,3 +1,5 @@
-const personaje = document.getElementById('personaje');
-const honguito = document.getElementById('honguito');
- 
+const jell = document.querySelector('.honguito');
+const personaje = document.querySelector('.personaje');
+let counter = 0;
+
+console.log(jell, personaje);
