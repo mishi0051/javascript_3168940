@@ -21,19 +21,24 @@
   transition: left 0.1s linear;
 }
 
-
-
-.objeto{
+.objecto{
   position: absolute;
-  top: 350px;
+  top: 30px;
   left: 4px;
   width: 100px;
   height: 100px;
   z-index: 1;
 
 }
-.copia-de-objeto{
+.copia-de-objecto{
   position: left;
+  top: 300px;
+  left: 600px;
+  width: 150px;
+  height: 120px;
+}
+.honguito{
+  position: absolute;
   top: 300px;
   left: 600px;
   width: 150px;
@@ -110,4 +115,76 @@
 @keyframes moverHonguito {
     0% { transform: translateX(0); }
     100% { transform: translateX(10px); }
+}
+
+
+/* ////////////////////////////////////////////SEGUNDO JUEGO///////////////////////// */
+
+
+.pajaro{
+  position: center;
+  top: 320px;
+  left: 7px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  transition: left 0.1s linear;
+}
+.conejo{
+  position: center;
+  top: 320px;
+  left: 7px;
+  width:100px;
+  z-index: 1;
+  transition: left 0.1s linear;
+}
+.muertes{
+  position: center;
+  top: 300px;
+  left: 600px;
+  width: 150px;
+  height: 120px;
+}
+.vida{
+  position: center;
+  top: 300px;
+  left: 600px;
+  width: 150px;
+  height: 120px;
+}
+
+
+
+/* ////////////////////////////////////TERCER JUEGO/////////////////////////////// */
+
+.alien{
+ position: center;
+  top: 320px;
+  left: 7px;
+  width: 55px;
+  height: 90px;
+  z-index: 1;
+  transition: left 0.1s linear;
+
+}
+.vaca{
+ position: center;
+  top: 320px;
+  left: 7px;
+  width: 90px;
+  height: 100px;
+  z-index: 1;
+  transition: left 0.1s linear;
+
+}
+.nave{
+position: center;
+  top: 320px;
+  left: 7px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  transition: left 0.1s linear;
+
+
 }
