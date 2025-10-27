@@ -1,215 +1,167 @@
+.body{
+  background-color: brown;
+  color: azure;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.galeria-container{
+  position: relative;
+  width: 750px;
+  margin: 30px;
+}
+.escenario{
+  display: none;
+  position: relative;
+}
+.escenario01{
+  display: block;
+}
+.button{
+  background-color: blueviolet;
+  color: rebeccapurple;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////// */
+
+
+.personaje, .honguito, .objecto, .objecto2, .copia-de-honguito,
+.pajaro, .conejo, .alien, .vaca, .nave, .bomba {
+  position: absolute;
+}
 
 .personaje {
-  position: absolute;
-  top: 320px;
+  width: 100px;
+  height: 100px;
   left: 7px;
-  width: 100px;
-  height: 100px;
+  bottom: 80px;
   z-index: 1;
-  transition: left 0.1s linear;
 }
-.objecto{
-  position: relative;
-  top: 30px;
-  left: 4px;
-  width: 100px;
-  height: 100px;
-  z-index: 1;
 
-}
-.objecto2{
-  position: relative;
-  top: 300px;
-  left: 600px;
+.honguito, .copia-de-honguito {
   width: 150px;
   height: 120px;
-}
-.honguito{
-  position: absolute;
   top: 300px;
   left: 600px;
-  width: 150px;
-  height: 120px;
 }
-.copia-de-honguito{
-  position: absolute;
+
+.copia-de-honguito {
   top: 100px;
-  left: 70px; 
-  width: 150px;
-  height: 120px;
+  left: 70px;
   transform: scaleX(-1);
 }
-.rectangulo{
-  position: absolute;
-  top: 400px;
-  left: 0px;
-  z-index: 0;
+
+/* SEGUNDO JUEGO */
+.pajaro, .conejo {
+  width: 100px;
+  height: 100px;
+  top: 320px;
+  left: 50px;
 }
-.rectangulo-verde{
+
+.muertes, .vida-juego2 {
   position: absolute;
-  top: 190px;
-  left: 100px;
-  z-index: 0;
+  top: 300px;
+  left: 600px;
+  width: 150px;
+  height: 120px;
 }
-.contador-de-monedas {
+
+/* TERCER JUEGO */
+.alien {
+  width: 55px;
+  height: 90px;
+  top: 320px;
+  left: 7px;
+}
+
+.vaca {
+  width: 90px;
+  height: 100px;
+  top: 320px;
+  left: 200px;
+}
+
+.nave {
+  width: 100px;
+  height: 100px;
+  top: 320px;
+  left: 600px;
+}
+
+.bomba {
+  width: 50px;
+  height: 40px;
+  top: 350px;
+  left: 450px;
+}
+
+.vida-juego3 {
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  left: 680px;
+}
+
+/* RECTÁNGULOS */
+.rectangulo, .rectangulo-verde {
+  top: 50px;
+}
+
+/* CONTADORES */
+.contador-de-monedas, .contador-de-corazon,
+.contador-de-muertes, .contador-de-vidas-juego-2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   display: flex;
   align-items: center;
   gap: 5px;
   background: rgba(255, 255, 255, 0.8);
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
-.contador-de-monedas img {
-  width: 35px;
-  height: 36px;
-}
-.contador-de-monedas span {
-  font-size: 18px;
-  font-weight: bold;
-}
+
 .contador-de-corazon {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 5px 10px;
-  border-radius: 5px;
+  top: 10px;
+  right: 10px;
 }
-.contador-de-corazon img {
+
+.contador-de-monedas img,
+.contador-de-corazon img,
+.contador-de-muertes img,
+.contador-de-vidas-juego-2 img {
   width: 35px;
-  height: 36px;
+  height: 35px;
 }
-.contador-de-corazon span {
+
+.contador-de-monedas span,
+.contador-de-corazon span,
+.contador-de-muertes span,
+.contador-de-vidas-juego-2 span {
   font-size: 18px;
   font-weight: bold;
 }
 
+/* ANIMACIONES */
 .saltar {
-    animation: saltar 0.5s ease forwards;
+  animation: saltar 0.5s ease forwards;
 }
 
 @keyframes saltar {
-0%{transform: translateY(0); opacity: 1;}
-50%{transform: translateY(-30px); opacity: 0.5;}
-100%{transform: translateY(0); opacity: 1;}
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-30px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 .moverHonguito {
-    animation: moverHonguito 1s linear infinite alternate;
+  animation: moverHonguito 1s linear infinite alternate;
 }
 
 @keyframes moverHonguito {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(10px); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(10px); }
 }
-
-
-/* ////////////////////////////////////////////SEGUNDO JUEGO///////////////////////// */
-
-
-.pajaro{
-  position: center;
-  top: 320px;
-  left: 7px;
-  width: 100px;
-  height: 100px;
-  z-index: 1;
-  transition: left 0.1s linear;
-}
-.conejo{
-  position: center;
-  top: 320px;
-  left: 7px;
-  width:100px;
-  z-index: 1;
-  transition: left 0.1s linear;
-}
-.muertes{
-  position: center;
-  top: 300px;
-  left: 600px;
-  width: 150px;
-  height: 120px;
-}
-.vida{
-  position: relative;
-  top: 300px;
-  left: 600px;
-  width: 150px;
-  height: 120px;
-}
-.contador-de-muertes{
-    display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.contador-de-muertes img {
-  width: 35px;
-  height: 36px;
-}
-.contador-de-muertes span {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-
-/* ////////////////////////////////////TERCER JUEGO/////////////////////////////// */
-
-.alien{
- position: center;
-  top: 320px;
-  left: 7px;
-  width: 55px;
-  height: 90px;
-  z-index: 1;
-  transition: left 0.1s linear;
-
-}
-.vaca{
- position: center;
-  top: 320px;
-  left: 7px;
-  width: 90px;
-  height: 100px;
-  z-index: 1;
-  transition: left 0.1s linear;
-
-}
-.nave{
-position: center;
-  top: 320px;
-  left: 7px;
-  width: 100px;
-  height: 100px;
-  z-index: 1;
-  transition: left 0.1s linear;
-
-
-}
-.bomba{
-position: center;
-  top: 320px;
-  left: 7px;
-  width: 50px;
-  height: 40px;
-  z-index: 1;
-  transition: left 0.1s linear;
-
-
-}
-.vida{
-position: center;
-  top: 320px;
-  left: 7px;
-  width: 50px;
-  height: 50px;
-  z-index: 1;
-  transition: left 0.1s linear;
-
-
-}
-
