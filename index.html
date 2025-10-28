@@ -8,15 +8,15 @@
 </head>
 <body>
 
-<div class="galeria-container">
-  <button id="anterior">anterior</button>
-    <button id="siguiente">siguiente</button>
-</div>
+
 <!--   //////////////////////////////PRIMER JUEGO/////////////////////////////////// -->
 
 
+<div class="galeria-container">
+  <button id="anterior">anterior</button>
+    <button id="siguiente">siguiente</button>
 
-<div class="escenario" id="escenario1">
+<div class="escenario visible" id="escenario1">
   
   <img src="fondo.jpg" alt="fondo" class="fondo primero" width="750" height="500">
 
@@ -30,7 +30,8 @@
 
   <div class="rectangulo" style="width: 750px; height: 100px; background-color: rgb(5, 0, 61);"></div>
   <div class="rectangulo-verde" style="width: 150px; height: 40px; background-color: rgb(3, 48, 36);"></div>
-
+  
+    </div>
   <div class="contador-de-monedas">
     <img src="objecto.png" alt="monedas">
     <span id="monedas-contador-1">0</span>
@@ -40,7 +41,7 @@
     <img src="personaje.png" alt="corazon">
     <span id="corazones-contador-1">0</span>
   </div>
-</div>
+
 
 <!--   //////////////////////////////FIN DEL PRIMER JUEGO/////////////////////////////////// -->
 
@@ -93,7 +94,7 @@
     <span id="corazones-contador-3">0</span>
   </div>
 </div>
-
+</div>
 <!--   //////////////////////////////FIN DEL TERCER JUEGO/////////////////////////////////// -->
 
 <script src="./app.js"></script>
@@ -102,7 +103,7 @@
 
 
 
-  <script src="./app.js"></script>
+
 
 </body>
 </html>

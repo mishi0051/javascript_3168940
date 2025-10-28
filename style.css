@@ -11,10 +11,9 @@
 }
 .escenario{
   display: none;
-  position: relative;
 }
-.escenario01{
-  display: block;
+.escenario01{23
+  display: block; 
 }
 .button{
   background-color: blueviolet;
@@ -25,10 +24,11 @@
   cursor: pointer;
 }
 
+
 /* //////////////////////////////////////////////////// */
 
 
-.personaje, .honguito, .objecto, .objecto2, .copia-de-honguito,
+/* .personaje, .honguito, .objecto, .objecto2, .copia-de-honguito,
 .pajaro, .conejo, .alien, .vaca, .nave, .bomba {
   position: absolute;
 }
@@ -54,8 +54,8 @@
   transform: scaleX(-1);
 }
 
-/* SEGUNDO JUEGO */
-.pajaro, .conejo {
+/* /* SEGUNDO JUEGO */
+/* /* .pajaro, .conejo {
   width: 100px;
   height: 100px;
   top: 320px;
@@ -71,7 +71,7 @@
 }
 
 /* TERCER JUEGO */
-.alien {
+/* .alien {
   width: 55px;
   height: 90px;
   top: 320px;
@@ -107,8 +107,8 @@
 }
 
 /* RECTÁNGULOS */
-.rectangulo, .rectangulo-verde {
-  top: 50px;
+/* .rectangulo, .rectangulo-verde {
+  top: 50px; 
 }
 
 /* CONTADORES */
@@ -145,7 +145,7 @@
   font-size: 18px;
   font-weight: bold;
 }
-
+ */
 /* ANIMACIONES */
 .saltar {
   animation: saltar 0.5s ease forwards;
