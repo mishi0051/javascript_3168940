@@ -1,3 +1,4 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,102 +9,87 @@
 </head>
 <body>
 
+  <!-- ================= PRIMER JUEGO ================= -->
+  <div class="galeria-container">
+    <button id="anterior" aria-label="Anterior">⟨</button>
+    <button id="siguiente" aria-label="Siguiente">⟩</button>
 
-<!--   //////////////////////////////PRIMER JUEGO/////////////////////////////////// -->
+    <div class="escenario visible" id="escenario1">
+      <img src="fondo.jpg" alt="fondo" class="fondo primero" width="750" height="500">
 
+      <img src="personaje.png" alt="personaje" class="personaje">
 
-<div class="galeria-container">
-  <button id="anterior">anterior</button>
-    <button id="siguiente">siguiente</button>
+      <img src="honguito.png" alt="honguito" class="honguito moverHonguito">
+      <img src="Copia de honguito.png" alt="honguito" class="copia-de-honguito moverHonguito">
 
-<div class="escenario visible" id="escenario1">
-  
-  <img src="fondo.jpg" alt="fondo" class="fondo primero" width="750" height="500">
+      <img src="objecto.png" id="objeto" class="objecto">
+      <img src="Copia de objecto.png" id="objecto2" class="objecto2">
 
-  <img src="personaje.png" alt="personaje" class="personaje">
+      <div class="rectangulo" style="width: 750px; height: 100px; background-color: rgb(5, 0, 61);"></div>
+      <div class="rectangulo-verde" style="width: 150px; height: 40px; background-color: rgb(3, 48, 36);"></div>
 
-  <img src="honguito.png" alt="honguito" class="honguito moverHonguito">
-  <img src="Copia de honguito.png" alt="honguito" class="copia-de-honguito moverHonguito">
+      <div class="contador-de-monedas">
+        <img src="objecto.png" alt="monedas">
+        <span id="monedas-contador-1">0</span>
+      </div>
 
-  <img src="objecto.png" id="objeto" class="objecto">
-  <img src="Copia de objecto.png" id="objecto2" class="objecto2">
-
-  <div class="rectangulo" style="width: 750px; height: 100px; background-color: rgb(5, 0, 61);"></div>
-  <div class="rectangulo-verde" style="width: 150px; height: 40px; background-color: rgb(3, 48, 36);"></div>
-  
+      <div class="contador-de-corazon">
+        <img src="personaje.png" alt="corazon">
+        <span id="corazones-contador-1">0</span>
+      </div>
     </div>
-  <div class="contador-de-monedas">
-    <img src="objecto.png" alt="monedas">
-    <span id="monedas-contador-1">0</span>
+
+    <!-- MINIATURAS DE LOS JUEGOS (una sola, dentro del contenedor) -->
+    <div class="miniaturas">
+      <img src="fondo.jpg" alt="Juego 1" data-indice="0" class="activa">
+      <img src="fondo conejo.jpg" alt="Juego 2" data-indice="1">
+      <img src="fondo 3.jpg" alt="Juego 3" data-indice="2">
+    </div>
+
+    <!-- ================= SEGUNDO JUEGO ================= -->
+    <div class="escenario" id="escenario2">
+      <img src="fondo conejo.jpg" alt="fondo" class="juego" width="750" height="500">
+
+      <img src="cuervo 1.jpg" alt="pajaro" class="pajaro">
+      <img src="conejo pao.jpg" alt="conejo" class="conejo">
+
+      <img src="corazon puntos.png" alt="muertes" class="muertes">
+      <img src="vidas.png" alt="vida" class="vida-juego2">
+
+      <div class="contador-de-muertes">
+        <img src="corazon puntos.png" alt="muertes">
+        <span id="muertes-contador-2">0</span>
+      </div>
+
+      <div class="contador-de-vidas-juego-2">
+        <img src="vidas.png" alt="vidas">
+        <span id="vidas-contador-2">0</span>
+      </div>
+    </div>
+
+    <!-- ================= TERCER JUEGO ================= -->
+    <div class="escenario" id="escenario3">
+      <img src="fondo 3.jpg" alt="fondo3" class="juego" width="750" height="500">
+
+      <img src="alien.png" alt="alien" class="alien">
+      <img src="vaca-removebg-preview.png" alt="vaca" class="vaca">
+      <img src="nave-removebg-preview.png" alt="nave" class="nave">
+      <img src="bomba.png" alt="bomba" class="bomba">
+      <img src="puntos-vida.png" alt="vida" class="vida-juego3">
+
+      <div class="contador-de-monedas">
+        <img src="objecto.png" alt="monedas">
+        <span id="monedas-contador-3">0</span>
+      </div>
+
+      <div class="contador-de-corazon">
+        <img src="personaje.png" alt="corazon">
+        <span id="corazones-contador-3">0</span>
+      </div>
+    </div>
   </div>
 
-  <div class="contador-de-corazon">
-    <img src="personaje.png" alt="corazon">
-    <span id="corazones-contador-1">0</span>
-  </div>
-
-
-<!--   //////////////////////////////FIN DEL PRIMER JUEGO/////////////////////////////////// -->
-
-
-
-
-<!--   //////////////////////////////SEGUNDO JUEGO/////////////////////////////////// -->
-<div class="escenario" id="escenario2">
-  <img src="fondo conejo.jpg" alt="fondo" class="juego" width="750" height="500">
-
-  <img src="cuervo 1.jpg" alt="pajaro" class="pajaro">
-  <img src="conejo pao.jpg" alt="conejo" class="conejo">
-
-  <img src="corazon puntos.png" alt="muertes" class="muertes">
-  <img src="vidas.png" alt="vida" class="vida-juego2">
-
-  <div class="contador-de-muertes">
-    <img src="corazon puntos.png" alt="muertes">
-    <span id="muertes-contador-2">0</span>
-  </div>
-
-  <div class="contador-de-vidas-juego-2">
-    <img src="vidas.png" alt="vidas">
-    <span id="vidas-contador-2">0</span>
-  </div>
-</div>
-
-<!--   //////////////////////////////FIN DEL SEGUNDO JUEGO/////////////////////////////////// -->
-
-
-
-
-<!--   //////////////////////////////TERCER JUEGO/////////////////////////////////// -->
-<div class="escenario" id="escenario3">
-  <img src="fondo 3.jpg" alt="fondo3" class="juego" width="750" height="500">
-
-  <img src="alien.png" alt="alien" class="alien">
-  <img src="vaca-removebg-preview.png" alt="vaca" class="vaca">
-  <img src="nave-removebg-preview.png" alt="nave" class="nave">
-  <img src="bomba.png" alt="bomba" class="bomba">
-  <img src="puntos-vida.png" alt="vida" class="vida-juego3">
-
-  <div class="contador-de-monedas">
-    <img src="objecto.png" alt="monedas">
-    <span id="monedas-contador-3">0</span>
-  </div>
-
-  <div class="contador-de-corazon">
-    <img src="personaje.png" alt="corazon">
-    <span id="corazones-contador-3">0</span>
-  </div>
-</div>
-</div>
-<!--   //////////////////////////////FIN DEL TERCER JUEGO/////////////////////////////////// -->
-
-<script src="./app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-</body>
-</html>
+<!-- ...existing code... -->

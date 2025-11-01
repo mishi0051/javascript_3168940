@@ -1,167 +1,150 @@
-.body{
-  background-color: brown;
-  color: azure;
+/* ...existing code... */
+body {
+  background: #f0f2f5; /* fondo claro como la foto */
+  color: #222;
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-.galeria-container{
+
+.galeria-container {
   position: relative;
   width: 750px;
-  margin: 30px;
-}
-.escenario{
-  display: none;
-}
-.escenario01{23
-  display: block; 
-}
-.button{
-  background-color: blueviolet;
-  color: rebeccapurple;
+  height: 500px;
+  margin: 50px auto;
+  background: transparent; /* el "marco" será la propia tarjeta del fondo */
   border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
+  box-shadow: none;
+  border-radius: 15px;
+  padding: 10px 10px 80px; /* espacio para miniaturas superpuestas */
+  overflow: visible;
 }
 
+/* cada escenario centra su imagen de fondo en una "tarjeta" */
+.escenario {
+  display: none;
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+  height: 100%;
+}
 
-/* //////////////////////////////////////////////////// */
+.visible {
+  display: block;
+}
 
+/* estilo de la imagen de fondo: tarjeta grande, centrada, con sombra */
+.escenario .fondo,
+.escenario .juego {
+  display: block;
+  width: 700px;
+  height: 380px;
+  margin: 10px auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  background-color: #fff;
+  border: 6px solid #f6f7f9; /* marco claro alrededor */
+}
 
-/* .personaje, .honguito, .objecto, .objecto2, .copia-de-honguito,
-.pajaro, .conejo, .alien, .vaca, .nave, .bomba {
+/* flechas: circulares y sobrepuestas a la tarjeta (izquierda/derecha) */
+button {
   position: absolute;
-}
-
-.personaje {
-  width: 100px;
-  height: 100px;
-  left: 7px;
-  bottom: 80px;
-  z-index: 1;
-}
-
-.honguito, .copia-de-honguito {
-  width: 150px;
-  height: 120px;
-  top: 300px;
-  left: 600px;
-}
-
-.copia-de-honguito {
-  top: 100px;
-  left: 70px;
-  transform: scaleX(-1);
-}
-
-/* /* SEGUNDO JUEGO */
-/* /* .pajaro, .conejo {
-  width: 100px;
-  height: 100px;
-  top: 320px;
-  left: 50px;
-}
-
-.muertes, .vida-juego2 {
-  position: absolute;
-  top: 300px;
-  left: 600px;
-  width: 150px;
-  height: 120px;
-}
-
-/* TERCER JUEGO */
-/* .alien {
-  width: 55px;
-  height: 90px;
-  top: 320px;
-  left: 7px;
-}
-
-.vaca {
-  width: 90px;
-  height: 100px;
-  top: 320px;
-  left: 200px;
-}
-
-.nave {
-  width: 100px;
-  height: 100px;
-  top: 320px;
-  left: 600px;
-}
-
-.bomba {
-  width: 50px;
-  height: 40px;
-  top: 350px;
-  left: 450px;
-}
-
-.vida-juego3 {
-  width: 50px;
-  height: 50px;
-  top: 100px;
-  left: 680px;
-}
-
-/* RECTÁNGULOS */
-/* .rectangulo, .rectangulo-verde {
-  top: 50px; 
-}
-
-/* CONTADORES */
-.contador-de-monedas, .contador-de-corazon,
-.contador-de-muertes, .contador-de-vidas-juego-2 {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2b7bd3;
+  border: 2px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 5px 10px;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  z-index: 30;
+}
+
+#anterior { left: calc(50% - 375px); } /* colocado junto al borde izquierdo de la tarjeta */
+#siguiente { right: calc(50% - 375px); } /* junto al borde derecho de la tarjeta */
+
+button:hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* miniaturas: pequeñas, centradas y superpuestas debajo de la tarjeta */
+.miniaturas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px; /* superpuesta al borde inferior del contenedor */
+  display: flex;
+  gap: 16px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  align-items: center;
+  z-index: 40;
+  width: auto;
+  max-width: 86%;
+}
+
+/* thumbnails más pequeñas como en la foto */
+.miniaturas img {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  border: 3px solid #e6e6e6;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.contador-de-corazon {
-  top: 10px;
-  right: 10px;
+.miniaturas img:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
+.miniaturas img.activa { border-color: #2b7bd3; box-shadow: 0 10px 26px rgba(43,123,211,0.25); transform: scale(1.03); }
+
+/* reducir todos los elementos internos que no sean fondos (ya lo tenías) */
+.galeria-container img:not(.fondo):not(.juego) {
+  max-width: 140px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
-.contador-de-monedas img,
-.contador-de-corazon img,
-.contador-de-muertes img,
-.contador-de-vidas-juego-2 img {
-  width: 35px;
-  height: 35px;
+/* control más específico para personajes u objetos pequeños */
+.galeria-container .personaje,
+.galeria-container .honguito,
+.galeria-container .copia-de-honguito,
+.galeria-container .objecto,
+.galeria-container .objecto2,
+.galeria-container .pajaro,
+.galeria-container .conejo,
+.galeria-container .alien,
+.galeria-container .vaca,
+.galeria-container .nave,
+.galeria-container .bomba {
+  max-width: 110px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  transform-origin: center;
 }
 
-.contador-de-monedas span,
-.contador-de-corazon span,
-.contador-de-muertes span,
-.contador-de-vidas-juego-2 span {
-  font-size: 18px;
-  font-weight: bold;
-}
- */
-/* ANIMACIONES */
-.saltar {
-  animation: saltar 0.5s ease forwards;
+/* mantiene contadores visibles sobre la tarjeta */
+.contador-de-monedas,
+.contador-de-corazon,
+.contador-de-muertes,
+.contador-de-vidas-juego-2 {
+  z-index: 50;
 }
 
-@keyframes saltar {
-  0% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(-30px); opacity: 0.5; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.moverHonguito {
-  animation: moverHonguito 1s linear infinite alternate;
-}
-
-@keyframes moverHonguito {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(10px); }
-}
+/* ...existing code... */
