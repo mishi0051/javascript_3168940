@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escenario interactivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= PRIMER JUEGO ================= -->
+  <div class="galeria-container">
+    <button id="anterior" aria-label="Anterior">⟨</button>
+    <button id="siguiente" aria-label="Siguiente">⟩</button>
+
+    <div class="escenario visible" id="escenario1">
+      <img src="fondo.jpg" alt="fondo" class="fondo primero" width="750" height="500">
+
+      <img src="personaje.png" alt="personaje" class="personaje">
+
+      <img src="honguito.png" alt="honguito" class="honguito moverHonguito">
+      <img src="Copia de honguito.png" alt="honguitodos" class="copia-de-honguito moverHonguito">
+
+      <img src="objecto.png" id="objeto" class="objecto">
+      <img src="Copia de objecto.png" id="objecto2" class="objecto2">
+
+      
+      <div class="contador-de-monedas">
+        <img src="objecto.png" alt="monedas">
+        <span id="monedas-contador-1">0</span>
+      </div>
+
+      <div class="contador-de-corazon">
+        <img src="personaje.png" alt="corazon">
+        <span id="corazones-contador-1">0</span>
+      </div>
+    </div>
+
+    <!-- MINIATURAS DE LOS JUEGOS (una sola, dentro del contenedor) -->
+    <div class="miniaturas">
+      <img src="fondo.jpg" alt="Juego 1" data-indice="0" class="activa">
+      <img src="fondo conejo.jpg" alt="Juego 2" data-indice="1">
+      <img src="fondo 3.jpg" alt="Juego 3" data-indice="2">
+    </div>
+
+    <!-- ================= SEGUNDO JUEGO ================= -->
+    <div class="escenario" id="escenario2">
+      <img src="fondo conejo.jpg" alt="fondo" class="juego" width="750" height="500">
+
+      <img src="cuervo 1.jpg" alt="pajaro" class="pajaro">
+      <img src="conejo pao.jpg" alt="conejo" class="conejo">
+
+      <img src="corazon puntos.png" alt="muertes" class="muertes">
+      <img src="vidas.png" alt="vida" class="vida-juego2">
+
+      <div class="contador-de-muertes">
+        <img src="corazon puntos.png" alt="muertes">
+        <span id="muertes-contador-2">0</span>
+      </div>
+
+      <div class="contador-de-vidas-juego-2">
+        <img src="vidas.png" alt="vidas">
+        <span id="vidas-contador-2">0</span>
+      </div>
+    </div>
+
+    <!-- ================= TERCER JUEGO ================= -->
+    <div class="escenario" id="escenario3">
+      <img src="fondo 3.jpg" alt="fondo3" class="juego" width="750" height="500">
+
+      <img src="alien.png" alt="alien" class="alien">
+      <img src="vaca-removebg-preview.png" alt="vaca" class="vaca">
+      <img src="nave-removebg-preview.png" alt="nave" class="nave">
+      <img src="bomba.png" alt="bomba" class="bomba">
+      <img src="puntos-vida.png" alt="vida" class="vida-juego3">
+
+      <div class="contador-de-monedas">
+        <img src="objecto.png" alt="monedas">
+        <span id="monedas-contador-3">0</span>
+      </div>
+
+      <div class="contador-de-corazon">
+        <img src="personaje.png" alt="corazon">
+        <span id="corazones-contador-3">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

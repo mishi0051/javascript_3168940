@@ -1,0 +1,195 @@
+body {
+  background: #f0f2f5; /* fondo claro como la foto */
+  color: #222;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.galeria-container {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 50px auto;
+  background: transparent; /* el "marco" será la propia tarjeta del fondo */
+  border: none;
+  box-shadow: none;
+  border-radius: 15px;
+  padding: 10px 10px 80px; /* espacio para miniaturas superpuestas */
+  overflow: visible;
+}
+
+/* cada escenario centra su imagen de fondo en una "tarjeta" */
+.escenario {
+  display: none;
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+  height: 100%;
+}
+
+.visible {
+  display: block;
+}
+
+/* estilo de la imagen de fondo: tarjeta grande, centrada, con sombra */
+.escenario .fondo,
+.escenario .juego {
+  display: block;
+  width: 700px;
+  height: 380px;
+  margin: 10px auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  background-color: #fff;
+  border: 6px solid #f6f7f9; /* marco claro alrededor */
+}
+
+/* flechas: circulares y sobrepuestas a la tarjeta (izquierda/derecha) */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2b7bd3;
+  border: 2px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  z-index: 30;
+}
+
+#anterior { left: calc(50% - 375px); } /* colocado junto al borde izquierdo de la tarjeta */
+#siguiente { right: calc(50% - 375px); } /* junto al borde derecho de la tarjeta */
+
+button:hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* miniaturas: pequeñas, centradas y superpuestas debajo de la tarjeta */
+.miniaturas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px; /* superpuesta al borde inferior del contenedor */
+  display: flex;
+  gap: 16px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  align-items: center;
+  z-index: 40;
+  width: auto;
+  max-width: 86%;
+}
+
+/* thumbnails más pequeñas como en la foto */
+.miniaturas img {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  border: 3px solid #e6e6e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.miniaturas img:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
+.miniaturas img.activa { border-color: #2b7bd3; box-shadow: 0 10px 26px rgba(43,123,211,0.25); transform: scale(1.03); }
+
+/* reducir todos los elementos internos que no sean fondos (ya lo tenías) */
+.galeria-container img:not(.fondo):not(.juego) {
+  max-width: 140px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* control más específico para personajes u objetos pequeños */
+
+ .honguito,
+.galeria-container .copia-de-honguito,
+.galeria-container .objecto,
+.galeria-container .objecto2,
+.galeria-container .alien,
+.galeria-container .vaca,
+.galeria-container .nave,
+.galeria-container .bomba {
+  max-width: 110px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  transform-origin: center;
+}
+.personaje{
+  position: fixed;
+  top: 330px;
+}
+.honguito{
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+.honguitodos{
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+/* ////////////////////// */
+.pajaro{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+.conejo{
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+/* ////////////////////// */
+.vaca{
+  position: absolute;
+  top: 250px;
+  left: 400px;
+}
+.nave{
+  position: absolute;
+  top: 150px;
+  left: 350px;
+}
+.alien{
+  position: absolute;
+  top: 120px;
+  left: 450px;
+}
+.bomba{
+  position: absolute;
+  top: 200px;
+  left: 550px;
+}
+
+
+
+
+/* mantiene contadores visibles sobre la tarjeta */
+.contador-de-monedas,
+.contador-de-corazon,
+.contador-de-muertes,
+.contador-de-vidas-juego-2 {
+  z-index: 50;
+}
