@@ -3,7 +3,7 @@ let comic = {
   "numeroCapitulos": "3",
   "genero": "fantasia-aventura",
   "sipnosis": "narra la historia de Isabel, una niña prodigiosa en el baile que vive en una isla junto a su pueblo. Este lugar enfrenta el desafío de olvidar su herencia musical, lo cual afecta profundamente al guardián del pueblo",
-  "autores": [carolina, jimena, valentina],
+  "autores": ["carolina , valentina , jimena"],
   "capitulos": [
     {
       "id": "1",
