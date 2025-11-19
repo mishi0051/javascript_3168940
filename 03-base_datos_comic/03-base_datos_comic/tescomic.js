@@ -1,6 +1,8 @@
 
 const infoComic = document.querySelector(".info-comic");
-const cardPersonajes = document.querySelector(".card.personajes");
+const cardPersonajes = document.querySelector(".card-personajes");
+
+
 console.log(comic.personajes);
 console.log(infoComic);
 
@@ -11,6 +13,16 @@ infoComic.innerHTML =
     <p>${comic.genero}</p>
 `
 comic.personajes.forEach(char => {
-  console.log(char);
-  document.body.innerHTML += `<img src="${char.imagen}" width="200">`;
+  const div = document.createElement("div");
+  div.classList.add("personajes");
+  div.innerHTML = 
+  `
+  <img src="${char.imagen}" alt="" >
+  <p>${char.nombre}</p>
+  <p>${char.descripcion}</p>
+  `
+
+cardPersonajes.appendChild(div)
+
 });
+
