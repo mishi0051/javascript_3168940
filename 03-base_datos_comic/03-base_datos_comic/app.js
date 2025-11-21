@@ -40,15 +40,16 @@ console.log(capitulos);
 
 capitulos.innerHTML = '';
 
-comic.capitulos.forEach(episodio => {
+comic.capitulos.forEach(cap => {
 
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
 
-    <img src="${episodio.imagen}" alt="${episodio.titulo}">
-    <h3>${episodio.titulo}</h3>
-    <p>${episodio.descripcion}</p>
+    <img src="${cap.imagen}" alt="${cap.titulo}">
+    <h3>${cap.id}</h3>
+    <p>${cap.personaje}</p>
+    <p>${cap.descripcion}</p>
 
     `;
 
