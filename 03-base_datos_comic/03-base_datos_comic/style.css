@@ -1,10 +1,10 @@
-
+/* ======== ESTILOS GENERALES ======== */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: #ffffff;
-  color: #222;
+  background: #0d0d0f; /* fondo oscuro tipo Catflix */
+  color: #fff;
 }
 
 /* ======== CABECERA ======== */
@@ -14,7 +14,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ff6a00; /* naranja */
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -22,10 +23,10 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 45px;
 }
 
-/* ======== NAV (MENU) ======== */
+/* ======== NAV ======== */
 .nav {
   display: flex;
   gap: 25px;
@@ -33,13 +34,14 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: 600;
-  transition: opacity .2s;
+  opacity: 0.85;
+  transition: 0.2s;
 }
 
 .nav a:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* ======== BUSCADOR ======== */
@@ -50,121 +52,123 @@ body {
 }
 
 .buscar input {
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 12px;
   border: none;
   outline: none;
-}
-
-/* ======== SECCIÓN PRINCIPAL ======== */
-.section {
-  padding: 20px 40px;
-}
-
-/* TITULOS DE CADA FILA */
-.row-title {
-  color: #ff6a00;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* CONTENEDOR HORIZONTAL */
-.row {
-  margin-bottom: 40px;
-  position: relative;
-  justify-content: flex;
-}
-
-/* TRACK = fila de tarjetas */
-.track {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-}
-
-/* ======== TARJETAS ======== */
-.card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform .2s, box-shadow .2s;
-  cursor: pointer;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.20);
-}
-
-/* ======== PERSONAJES ======== */
-.personajes .card img {
-  height: 260px;
-}
-
-/* ======== CAPÍTULOS ======== */
-.capitulos .card img {
-  height: 220px;
-}
-
-/* ======== BOTONES (flechas) ======== */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ff6a00;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
+  background: #1c1c22;
   color: white;
-  font-size: 18px;
-  font-weight: 700;
-  transition: background .2s;
 }
 
-.arrow:hover {
-  background: #e55e00;
-}
+/* =======================================
+   SECCIÓN HERO (LA IMAGEN GRANDE)
+======================================= */
 
-.arrow[data-left] {
-  left: -20px;
-}
 
-.arrow[data-right] {
-  right: -20px;
-}
 
-/* ======== BOTONES PRINCIPALES ======== */
+
+
+
+/* ======== BOTONES HERO ======== */
 .btn {
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 12px 22px;
+  border-radius: 12px;
   background: #ff6a00;
   color: white;
   border: none;
   cursor: pointer;
-  font-weight: 600;
-  transition: background .2s;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.2s;
 }
 
 .btn:hover {
   background: #e55e00;
 }
 
-/* ======== FOOTER ======== */
+.btn.secondary {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* =======================================
+   SECCIÓN DE FILAS Y TARJETAS
+======================================= */
+.section {
+  padding: 20px 40px;
+}
+
+
+
+.row {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* TARJETAS */
+.card {
+  min-width: 200px;
+  height: 280px;
+  background: #1a1b20;
+  border-radius: 12px;
+
+
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff6a00;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: #e55e00;
+}
+
+.arrow[data-left] { left: -15px; }
+.arrow[data-right] { right: -15px; }
+
+/* FOOTER */
 footer {
   margin-top: 50px;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-weight: 600;
   color: #ff6a00;
 }
