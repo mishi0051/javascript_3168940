@@ -1,174 +1,174 @@
-/* ======== ESTILOS GENERALES ======== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0d0d0f; /* fondo oscuro tipo Catflix */
-  color: #fff;
-}
-
-/* ======== CABECERA ======== */
-.cabeza-de-pagina {
-  width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  color: white;
-}
-
-.logo img {
-  height: 45px;
-}
-
-/* ======== NAV ======== */
-.nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  opacity: 0.85;
-  transition: 0.2s;
-}
-
-.nav a:hover {
-  opacity: 1;
-}
-
-/* ======== BUSCADOR ======== */
-.accion {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.buscar input {
-  padding: 6px 12px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background: #1c1c22;
-  color: white;
-}
-
-/* =======================================
-   SECCIÓN HERO (LA IMAGEN GRANDE)
-======================================= */
-
-
-
-
-
-
-/* ======== BOTONES HERO ======== */
-.btn {
-  padding: 12px 22px;
-  border-radius: 12px;
-  background: #ff6a00;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: #e55e00;
-}
-
-.btn.secondary {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* =======================================
-   SECCIÓN DE FILAS Y TARJETAS
-======================================= */
-.section {
-  padding: 20px 40px;
-}
-
-
-
-.row {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 15px;
-}
-
-.track::-webkit-scrollbar {
-  display: none;
-}
-
-/* TARJETAS */
-.card {
-  min-width: 200px;
-  height: 280px;
-  background: #1a1b20;
-  border-radius: 12px;
-
-
-  cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
-}
-
-/* Flechas */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ff6a00;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
-  z-index: 10;
-}
-
-.arrow:hover {
-  background: #e55e00;
-}
-
-.arrow[data-left] { left: -15px; }
-.arrow[data-right] { right: -15px; }
-
-/* FOOTER */
-footer {
-  margin-top: 50px;
-  text-align: center;
-  padding: 25px;
-  font-weight: 600;
-  color: #ff6a00;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0f; /* fondo oscuro tipo Catflix */
+    color: #fff;
+  }
+  tematica netflix
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #e50914; /* color rojo característico de Netflix */
+  }
+  a {
+    color: #e50914;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }   
+  .button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .button:hover {
+    background-color: #b0060f;
+  }
+  .navbar {
+    background-color: #141414;
+    padding: 10px 20px;
+  }
+  .navbar a {
+   color: #fff;
+    margin-right: 15px;
+  }  .navbar a:hover {
+    color: #e50914;
+  }
+  .footer {
+    background-color: #141414;
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .footer a {
+    color: #666;
+  }
+  .footer a:hover {
+    color: #e50914;
+  }
+  .card {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  .card-content {
+    padding: 15px;
+  }
+  .card-content h3 {
+    margin: 0 0 10px 0;
+    color: #e50914;
+  }
+  .card-content p {
+    color: #ccc;
+    font-size: 14px;
+  } 
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .header {
+    background-color: #141414;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0;
+    color: #e50914;
+  }
+  .search-bar {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .search-bar input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .search-bar input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #e50914;
+  } 
+  .highlight {
+    color: #e50914;
+    font-weight: bold;
+  }
+  .subtitle {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .modal-content {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+  }
+  .modal-content h2 {
+    margin-top: 0;
+    color: #e50914;
+  }
+  .modal-content p {
+    color: #ccc;
+  }
+  .close-button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;       
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    float: right;
+  }
+   organizar imagenes en cuadrícula
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .image-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .image-grid img:hover {
+    transform: scale(1.05);
+  }
