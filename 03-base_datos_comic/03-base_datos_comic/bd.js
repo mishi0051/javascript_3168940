@@ -1,13 +1,14 @@
-let comic = {
+
+export let comic = {
   "nombreComic": "Super hero  HUELLAS DE RITMO",
   "numeroCapitulos": "3",
   "genero": "fantasia-aventura",
   "sipnosis": "narra la historia de Isabel, una niña prodigiosa en el baile que vive en una isla junto a su pueblo. Este lugar enfrenta el desafío de olvidar su herencia musical, lo cual afecta profundamente al guardián del pueblo",
   "autores": ["carolina , valentina , jimena"],
   "personajes": [
-    {
-      "imagen": "./shakira.png",
+    { 
       "id": "1",
+      "imagen": "./shakira.png",
       "nombre": "Isabel",
       "edad": "10",
       "descripcion": "Isabel es una niña de 10 años, con una energía inagotable y una pasión desbordante por el baile. Su talento innato la convierte en la mejor bailarina de su aldea, y su espíritu alegre y optimista inspira a todos a su alrededor."
@@ -15,6 +16,7 @@ let comic = {
     { 
      
       "id": "2",
+      
       "nombre": "lobo",
       "edad": "55",
       "descripcion": "Lobo es el guardián del pueblo, un hombre sabio y fuerte que ha dedicado su vida a proteger las tradiciones y la herencia musical de su gente. A pesar de su apariencia ruda, tiene un corazón bondadoso y una profunda conexión con la música y el baile."

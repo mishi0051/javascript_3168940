@@ -21,12 +21,12 @@ comic.personajes.forEach(char => {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
-
+ < a href="personajes.html?id=${char.id}">
     <img src="${char.imagen}" alt="${char.nombre}">
     <h3>${char.nombre}</h3>
     <p>${char.edad}</p>
     <p>${char.descripcion}</p>
-
+</a>
     `;
 
     galeria.appendChild(div);
@@ -45,11 +45,12 @@ comic.capitulos.forEach(cap => {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
-
+<a href="capitulos.html?id=${cap.id}">
     <img src="${cap.imagen}" alt="${cap.titulo}">
     <h3>${cap.id}</h3>
     <p>${cap.personaje}</p>
     <p>${cap.descripcion}</p>
+</a>
 
     `;
 

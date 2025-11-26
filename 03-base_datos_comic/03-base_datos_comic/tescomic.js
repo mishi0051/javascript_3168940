@@ -1,4 +1,4 @@
-
+import { comic } from "./comic.js";
 const infoComic = document.querySelector(".info-comic");
 const cardPersonajes = document.querySelector(".card-personajes");
 
