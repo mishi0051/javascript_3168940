@@ -10,18 +10,18 @@ cabezaDePagina.innerHTML =
  */
 
 
-const galeria = document.querySelector('.personajess');
+const galeria = document.querySelector('.personajes');
 
 console.log(galeria);
 
 galeria.innerHTML = '';
 
 comic.personajes.forEach(char => {
- 
+
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
- < a href="personajes.html?id=${char.id}">
+<a href="personajes.html?id=${char.id}">
     <img src="${char.imagen}" alt="${char.nombre}">
     <h3>${char.nombre}</h3>
     <p>${char.edad}</p>

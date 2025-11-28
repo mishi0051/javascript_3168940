@@ -1,5 +1,5 @@
-
 export let comic = {
+
   "nombreComic": "Super hero  HUELLAS DE RITMO",
   "numeroCapitulos": "3",
   "genero": "fantasia-aventura",
