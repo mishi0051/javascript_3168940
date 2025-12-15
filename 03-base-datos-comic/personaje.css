@@ -1,0 +1,71 @@
+.pagina-personaje {
+  background: linear-gradient(to bottom, #fffaf4, #f8e8d0);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.personaje-detalle {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(166, 124, 82, 0.2);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column; /* Cambiado a vertical */
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  color: #a67c52;
+  margin-bottom: 2rem;
+}
+
+.personaje-detalle img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
+
+.info-personaje h3 {
+  font-size: 2.2rem;
+  color: #a67c52;
+  margin-bottom: 1rem;
+}
+
+.info-personaje p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.btn-volver {
+  display: block;
+  width: fit-content;
+  margin: 3rem auto 0;
+  background: #a67c52;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  background: #855e3b;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .titulo-seccion { font-size: 2rem; }
+  .personaje-detalle { padding: 2rem; }
+}
