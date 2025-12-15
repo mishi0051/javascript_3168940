@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-sharum {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+boton en el centro de la página
+.contenedor {
+    text-align: center;
+    margin-top: 100px;
+}
+.btn-sharum {
+    display: inline-block;
+    line-height: normal;
+}
